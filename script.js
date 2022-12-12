@@ -47,11 +47,5 @@ trash.addEventListener('click', (e)=>{
 
 
 apagar.addEventListener('click', ()=>{
-    let array = inputItem.value.split('')
-    array.pop()
-    let trans = array.toString()
-    let a = trans.replace(/,/g, "").replace(/\./g, "");
-    inputItem.value = a
-
-    
+    inputItem.value = inputItem.value.slice(0, -1)
 })
